@@ -1,12 +1,15 @@
 import React from 'react';
-import {View, Image} from 'react-native';
+import { View, Image } from 'react-native';
 import {
   onboardingCommonStyle as ocs,
   onboardingWelcomeStyle as ows,
 } from '../../../../assets/styles/';
-import {RNPText, Spacer, Card} from '../../../common';
+import { RNPText, Spacer, Card, CustomButton } from '../../../common';
+interface Props {
+  handleNext: () => void;
+}
 
-export const Welcome = () => {
+export const Welcome = ({ handleNext }: Props) => {
   return (
     <View style={ocs.wrapper}>
       {/* welcome message */}
@@ -37,6 +40,11 @@ export const Welcome = () => {
           <Spacer space={20} />
           <RNPText style={ows.textStyle} title="I have a newborn" />
         </Card>
+        <CustomButton
+          title="Next"
+          onPress={handleNext}
+          rightIcon="arrow-right"
+        />
       </View>
     </View>
   );

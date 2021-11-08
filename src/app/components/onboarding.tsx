@@ -19,16 +19,24 @@ const Onboarding = (props: any) => {
       props.navigation.navigate('main')
     }
   };
+
+  const handleNext = () => {
+    if (activeScreen < onboarding_screens.length - 1) {
+      setActiveScreen((prev) => prev + 1);
+    } else {
+      props.navigation.navigate('main')
+    }
+  }
   const onboarding_screens = [
-    <Welcome />,
-    <QuestionScreen1 handleNext={hadleSkip} {...props} />,
-    <QuestionScreen2 handleNext={hadleSkip}{...props} />,
-    <Location handleNext={hadleSkip} {...props} />,
+    <Welcome handleNext={handleNext} {...props} />,
+    <QuestionScreen1 handleNext={handleNext} {...props} />,
+    <QuestionScreen2 handleNext={handleNext}{...props} />,
+    <Location handleNext={handleNext} {...props} />,
     <Ready {...props} />,
   ];
 
   const goBack = () => {
-    if (activeScreen > 0) {
+    if (activeScreen >= 0) {
       setActiveScreen(() => activeScreen - 1);
     } else {
       console.log('go to login page');
