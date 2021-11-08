@@ -7,7 +7,6 @@ import { ButtonRNP } from '../../../../common'
 import { app_color, color } from '../../../../../assets/themes/theme';
 
 export const CategoryListing = () => {
-    console.log('categories', categories)
     return (
         <View style={styles.wrapper}>
             <Text style={styles.textHeader}>Shop by Category</Text>

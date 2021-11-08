@@ -1,18 +1,16 @@
 import React from 'react';
-import {ButtonRNP, RNPText, Spacer} from '../../common/';
-import {View, Image, StyleSheet, SwitchIOS} from 'react-native';
-import {welcomeScreenStyle as ws} from '../../../assets/styles';
-import {app_color} from '../../../assets/themes/theme';
+import { ButtonRNP, RNPText, Spacer } from '../../common/';
+import { View, Image, StyleSheet, SwitchIOS } from 'react-native';
+import { welcomeScreenStyle as ws } from '../../../assets/styles';
+import { app_color } from '../../../assets/themes/theme';
 
-import {useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 interface props {
   navigation: any;
 }
 
-export const Welcome = ({navigation}: props) => {
-  const authState = useSelector((state: any) =>
-    console.log('auth sate', state),
-  );
+export const Welcome = ({ navigation }: props) => {
+
   return (
     <View style={ws.wrapper}>
       {/* Header title */}

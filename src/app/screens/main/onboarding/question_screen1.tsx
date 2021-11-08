@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from 'react-native';
+import { View } from 'react-native';
 import {
   onboardingCommonStyle as ocs,
   questionScreenStyle as qs,
@@ -7,24 +7,21 @@ import {
 import {
   RNPText,
   Spacer,
-  ButtonRNP,
   CustomButton,
   MyDatePicker,
 } from '../../../common';
-import {navigate, goBack} from '../../../utilities/navigationRef';
 
 interface Props {
   handleNext: () => void;
 }
 
-export const QuestionScreen1 = ({handleNext}: Props) => {
-  console.log('handleNe', handleNext);
+export const QuestionScreen1 = ({ handleNext }: Props) => {
   return (
     <View style={[ocs.wrapper, qs.container]}>
       <View style={qs.heading}>
         <RNPText title="Congratulations" style={ocs.title} />
         <Spacer />
-        <View style={{width: '90%'}}>
+        <View style={{ width: '90%' }}>
           <RNPText style={ocs.subTitle} title="When is your due date" />
         </View>
       </View>

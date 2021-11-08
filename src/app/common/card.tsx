@@ -1,19 +1,18 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
-import {color} from '../../assets/themes/theme';
-import {normalize} from '../../app/utilities/utils';
+import { StyleSheet, View } from 'react-native';
+import { color } from '../../assets/themes/theme';
+import { normalize } from '../../app/utilities/utils';
 
 interface CardProps {
   style?: any;
   children?: any;
 }
 
-const Card = ({children, style}: CardProps) => {
-  console.log('style', style);
+const Card = ({ children, style }: CardProps) => {
   return <View style={[styles.card, style]}>{children}</View>;
 };
 
-export {Card};
+export { Card };
 
 const styles = StyleSheet.create({
   card: {

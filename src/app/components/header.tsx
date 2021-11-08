@@ -4,7 +4,6 @@ import normalize from 'react-native-normalize';
 import { IconM, Spacer } from '../common'
 
 export const Header = ({ navigation }: any) => {
-    console.log(navigation)
     return (
         <View style={styles.header}>
             <TouchableOpacity style={styles.leftSection} onPress={() => navigation.openDrawer()}>

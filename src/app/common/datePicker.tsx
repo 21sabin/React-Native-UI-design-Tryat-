@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import DatePicker from 'react-native-datepicker';
-import {normalize} from '../utilities/utils';
+import { normalize } from '../utilities/utils';
 
 const MyDatePicker = () => {
   const [selectedDate, setDate] = useState<any>(null);
@@ -23,11 +23,10 @@ const MyDatePicker = () => {
       cancelBtnText="Cancel"
       customStyles={{}}
       onDateChange={date => {
-        console.log(date);
         setDate(date);
       }}
     />
   );
 };
 
-export {MyDatePicker};
+export { MyDatePicker };
