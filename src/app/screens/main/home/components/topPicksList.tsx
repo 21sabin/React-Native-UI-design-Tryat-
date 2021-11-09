@@ -9,8 +9,8 @@ export const TopPicks = () => {
         <View style={styles.wrapper}>
             <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
                 {
-                    top_picks_for_you.map((item: any) => {
-                        return <TopPicksItem {...item} />
+                    top_picks_for_you.map((item: any, i: number) => {
+                        return <TopPicksItem {...item} key={i} />
                     })
                 }
             </ScrollView>

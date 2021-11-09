@@ -13,7 +13,7 @@ interface BtnProps {
   title: String;
   onPress: () => any;
   style?: style;
-  labelColor?: string;
+  labelColor?: any;
   leftIcon?: string;
   rightIcon?: string;
 }
@@ -47,7 +47,7 @@ export const CustomButton = ({
   <TouchableOpacity
     onPress={onPress}
     style={[styles.default, styles.defaultBtnStyle, styles.customBtn, style]}>
-    <RNPText title={title} style={[styles.customBtnText, labelColor]} />
+    <RNPText title={title} style={[styles.customBtnText, labelColor && { color: labelColor }]} />
     <Spacer width={true} space={5} />
     {rightIcon && <IconM name={rightIcon} color="#fff" size={normalize(20)} />}
   </TouchableOpacity>

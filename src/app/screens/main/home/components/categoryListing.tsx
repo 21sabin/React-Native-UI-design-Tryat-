@@ -12,8 +12,8 @@ export const CategoryListing = () => {
             <Text style={styles.textHeader}>Shop by Category</Text>
             <View style={styles.categoryListing}>
                 {
-                    categories.map((item: any) => {
-                        return <CategoryItem {...item} />
+                    categories.map((item: any, i: number) => {
+                        return <CategoryItem {...item} key={i} />
                     })
                 }
             </View>

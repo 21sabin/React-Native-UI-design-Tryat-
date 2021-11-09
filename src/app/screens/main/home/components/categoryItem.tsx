@@ -2,9 +2,9 @@ import React from 'react';
 import { View, StyleSheet, Text, Image } from 'react-native'
 import normalize from 'react-native-normalize';
 
-export const CategoryItem = ({ id, title, thumbnail }: any) => {
+export const CategoryItem = ({ id, title, thumbnail, ...props }: any) => {
     return (
-        <View style={styles.wrapper}>
+        <View style={styles.wrapper} {...props}>
             <Image
                 source={thumbnail}
             />
